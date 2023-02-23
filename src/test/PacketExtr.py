@@ -14,7 +14,7 @@ while True:
     while True:
         if data == b'B':
             break
-        else: 
+        else:
         byte_array += bytearray(data).decode()
 
 #    num_bytes_to_read = int(num_bytes)
@@ -24,7 +24,6 @@ while True:
     while num_bytes_to_read > 0:
         playload = sys.stdin.buffer.read1(num_bytes_to_read)
         num_bytes_to_read -= len(playload)
-        
+
         sys.stdout.buffer.write(playload)
         sys.stdout.buffer.flush()
-        

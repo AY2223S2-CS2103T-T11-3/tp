@@ -98,7 +98,7 @@ case $srclang in
     fi
     evalcmd="$tmpdir/$fname"
     ;;
-esac 
+esac
 
 evalRun() {
   mkdirTmp

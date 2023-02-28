@@ -50,19 +50,27 @@ Paidlancers is a **desktop app for keeping track of your freelancing events, opt
 
 ## Features
 
-### Add a Contact
-Adding a contact : `newcontact`
-Adding a contact to contacts
-Format: newcontact NAME NUMBER
-Creates a new contact with specified NAME and NUMBER
+### Add a Contact : `newcontact`
+
+Adding a contact to contacts.
+
+Format: `newcontact /n NAME /no NUMBER`
+
+Creates a new contact with specified `NAME` and `NUMBER`
+
 Example:
-newcontact Deborah Tan /num 91234567
+- `newcontact /n Deborah Tan /no 91234567`
+
+- `newcontact /n Bala Krisnan /no 98765432`
 
 
-View all contacts : listcontact
-Displays all contacts saved in a list
-Format: listcontact
-Displays the list of contacts saved
+### View all contacts : `listcontact`
+
+Displays all contacts saved in a list.
+
+Format: `listcontact`
+
+Displays the list of contacts saved.
 
 
 Linking a client contact  to a event : link
@@ -153,13 +161,13 @@ Paidlancer data are saved in the hard disk automatically exiting the program. Th
 **A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous TaskGenie home folder.
 
 ## Command Summary
-|                   Commands                    |                     Command Format                      |                        Example Usage                          | 
-|:---------------------------------------------:|:-------------------------------------------------------:|:-------------------------------------------------------------:|
-| [Add a Contact](#add-a-contact) | | |  
-| [View Contact List](#view-contact-list) | | |  
-| [Link Contact to Event](#link-contact-event) | | |
-| [View Rate](#view-rate) | | |  
-| [Marks event as done](#marks-event-as-done-:-mark) | `mark INDEX` | `mark 2` |
-| [Create a new event](#create-a-new-event-:-newevent)  | `newevent` | `newevent` |
+|                       Commands                       |         Command Format          |              Example Usage               | 
+|:----------------------------------------------------:|:-------------------------------:|:----------------------------------------:|
+|          [Add a Contact](#add-a-contact)             | `newcontact /n NAME /no NUMBER` | `newcontact /n Deborah Tan /no 91234567` |  
+|       [View Contact List](#view-contact-list)        |         ` listcontact`          |              `listcontact`               |  
+|     [Link Contact to Event](#link-contact-event)     |                                 |                                          |
+|               [View Rate](#view-rate)                |                                 |                                          |  
+|  [Marks event as done](#marks-event-as-done-:-mark)  |          `mark INDEX`           |                 `mark 2`                 |
+| [Create a new event](#create-a-new-event-:-newevent) |           `newevent`            |                `newevent`                |
 
 [Back to top](#user-guide-for-taskgenie)

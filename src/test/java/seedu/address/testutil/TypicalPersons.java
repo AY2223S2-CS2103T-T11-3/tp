@@ -17,7 +17,7 @@ import seedu.address.model.AddressBook;
 import seedu.address.model.person.Event;
 
 /**
- * A utility class containing a list of {@code Person} objects to be used in tests.
+ * A utility class containing a list of {@code Event} objects to be used in tests.
  */
 public class TypicalPersons {
 

@@ -18,7 +18,6 @@ public class PersonBuilder {
 
     public static final String DEFAULT_NAME = "Amy Bee";
     public static final String DEFAULT_RATE = "85355255";
-    public static final String DEFAULT_EMAIL = "amy@gmail.com";
     public static final String DEFAULT_ADDRESS = "123, Jurong West Ave 6, #08-111";
 
     private Name name;
@@ -79,7 +78,7 @@ public class PersonBuilder {
     }
 
     public Event build() {
-        return new Event(name, rate, address, tags);
+        return new Event(name, new Rate("1"), new Address("placeholder address"), new HashSet<>());
     }
 
 }

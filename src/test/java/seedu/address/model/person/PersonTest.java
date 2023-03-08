@@ -71,5 +71,16 @@ public class PersonTest {
         Event editedAlice = new PersonBuilder(ALICE).withName(VALID_NAME_BOB).build();
         assertFalse(ALICE.equals(editedAlice));
 
+        // different rate -> returns true because of placeholders
+        editedAlice = new PersonBuilder(ALICE).withRate(VALID_PHONE_BOB).build();
+        assertTrue(ALICE.equals(editedAlice));
+
+        // different address -> returns true because of placeholders
+        editedAlice = new PersonBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).build();
+        assertTrue(ALICE.equals(editedAlice));
+
+        // different tags -> returns true because of placeholders
+        editedAlice = new PersonBuilder(ALICE).withTags(VALID_TAG_HUSBAND).build();
+        assertTrue(ALICE.equals(editedAlice));
     }
 }

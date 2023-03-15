@@ -102,6 +102,14 @@ public class AddressBook implements ReadOnlyAddressBook {
         persons.mark(target, markedEvent);
     }
 
+     /**
+     * Removes {@code key} from this {@code AddressBook}.
+     * {@code key} must exist in the address book.
+     */
+    public void unmarkEvent(Event target, Event UnmarkedEvent) {
+        persons.unmark(target, UnmarkedEvent);
+    }
+
     public void linkContact(Event event, Contact contact) {
         event.linkContact(contact);
     }

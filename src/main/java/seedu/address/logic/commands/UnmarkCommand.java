@@ -19,22 +19,22 @@ import seedu.address.model.person.Time;
 import seedu.address.model.tag.Tag;
 
 /**
- * Marks an event identified using it's displayed index from the address book.
+ * Unmarks an event identified using it's displayed index from the address book.
  */
-public class MarkCommand extends Command {
+public class UnmarkCommand extends Command {
 
-    public static final String COMMAND_WORD = "mark";
+    public static final String COMMAND_WORD = "unmark";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-            + ": Marks the event identified by the index number used in the displayed event list.\n"
+            + ": Umarks the event identified by the index number used in the displayed event list.\n"
             + "Parameters: INDEX (must be a positive integer)\n"
             + "Example: " + COMMAND_WORD + " 1";
 
-    public static final String MESSAGE_MARK_EVENT_SUCCESS = "Marked event: %1$s";
+    public static final String MESSAGE_UNMARK_EVENT_SUCCESS = "Unmarked event: %1$s";
 
     private final Index targetIndex;
 
-    public MarkCommand(Index targetIndex) {
+    public UnmarkCommand(Index targetIndex) {
         this.targetIndex = targetIndex;
     }
 
@@ -48,10 +48,10 @@ public class MarkCommand extends Command {
         }
 
         Event eventToUnmark = lastShownList.get(targetIndex.getZeroBased());
-        Event markedEvent = createUnmarkedEvent(eventToUnmark);
-        model.markEvent(eventToUnmark, markedEvent);
+        Event unmarkedEvent = createUnmarkedEvent(eventToUnmark);
+        model.unmarkEvent(eventToUnmark, unmarkedEvent);
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
-        return new CommandResult(String.format(MESSAGE_MARK_EVENT_SUCCESS, eventToUnmark));
+        return new CommandResult(String.format(MESSAGE_UNMARK_EVENT_SUCCESS, eventToUnmark));
     }
 
     /**
@@ -71,7 +71,7 @@ public class MarkCommand extends Command {
 
         Event updatedEvent = new Event(
                 updatedName, updatedRate, updatedAddress, updatedStartTime, updatedEndTime, updatedTags);
-        updatedEvent.mark();
+        updatedEvent.unmark();
         updatedEvent.linkContact(updatedContact);
         return updatedEvent;
     }
@@ -79,7 +79,7 @@ public class MarkCommand extends Command {
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
-                || (other instanceof MarkCommand // instanceof handles nulls
-                && targetIndex.equals(((MarkCommand) other).targetIndex)); // state check
+                || (other instanceof UnmarkCommand // instanceof handles nulls
+                && targetIndex.equals(((UnmarkCommand) other).targetIndex)); // state check
     }
 }

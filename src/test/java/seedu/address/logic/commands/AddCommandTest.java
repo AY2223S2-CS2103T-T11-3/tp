@@ -195,6 +195,11 @@ public class AddCommandTest {
         public void markEvent(Event target, Event markedEvent) {
             throw new AssertionError("This method should not be called.");
         }
+
+        @Override
+        public void unmarkEvent(Event target, Event UnmarkedEvent) {
+            throw new AssertionError("This method should not be called.");
+        }
     }
 
     /**

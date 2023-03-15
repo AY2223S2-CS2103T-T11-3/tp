@@ -88,6 +88,15 @@ public class UniquePersonList implements Iterable<Event> {
         setPerson(toMark, markedEvent);
     }
 
+     /**
+     * Unmarks the equivalent event from the list.
+     * The event must exist in the list.
+     */
+    public void unmark(Event toUnmark, Event UnmarkedEvent) {
+        requireNonNull(toUnmark);
+        setPerson(toUnmark, UnmarkedEvent);
+    }
+
     public void setPersons(UniquePersonList replacement) {
         requireNonNull(replacement);
         internalList.setAll(replacement.internalList);

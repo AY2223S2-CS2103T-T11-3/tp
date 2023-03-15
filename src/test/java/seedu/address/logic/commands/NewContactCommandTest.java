@@ -200,6 +200,11 @@ class NewContactCommandTest {
         public void markEvent(Event target, Event markedEvent) {
             throw new AssertionError("This method should not be called.");
         }
+
+        @Override
+        public void unmarkEvent(Event target, Event unmarkedEvent) {
+            throw new AssertionError("This method should not be called.");
+        }
     }
 
     /**

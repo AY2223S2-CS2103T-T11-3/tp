@@ -84,7 +84,7 @@ public class Event {
         mark.setDone();
     }
 
-     /**
+    /**
      * Marks event as undone.
      */
     public void unmark() {

@@ -126,9 +126,9 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public void unmarkEvent(Event target, Event UnmarkedEvent) {
+    public void unmarkEvent(Event target, Event unmarkedEvent) {
         requireNonNull(target);
-        addressBook.unmarkEvent(target, UnmarkedEvent);
+        addressBook.unmarkEvent(target, unmarkedEvent);
         updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
     }
 

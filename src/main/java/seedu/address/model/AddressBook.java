@@ -95,19 +95,19 @@ public class AddressBook implements ReadOnlyAddressBook {
     }
 
     /**
-     * Removes {@code key} from this {@code AddressBook}.
+     * Marks {@code key} from this {@code AddressBook}.
      * {@code key} must exist in the address book.
      */
     public void markEvent(Event target, Event markedEvent) {
         persons.mark(target, markedEvent);
     }
 
-     /**
-     * Removes {@code key} from this {@code AddressBook}.
+    /**
+     * Unmarks {@code key} from this {@code AddressBook}.
      * {@code key} must exist in the address book.
      */
-    public void unmarkEvent(Event target, Event UnmarkedEvent) {
-        persons.unmark(target, UnmarkedEvent);
+    public void unmarkEvent(Event target, Event unmarkedEvent) {
+        persons.unmark(target, unmarkedEvent);
     }
 
     public void linkContact(Event event, Contact contact) {

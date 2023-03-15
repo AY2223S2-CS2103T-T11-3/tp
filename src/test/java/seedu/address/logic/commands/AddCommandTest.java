@@ -197,7 +197,7 @@ public class AddCommandTest {
         }
 
         @Override
-        public void unmarkEvent(Event target, Event UnmarkedEvent) {
+        public void unmarkEvent(Event target, Event unmarkedEvent) {
             throw new AssertionError("This method should not be called.");
         }
     }

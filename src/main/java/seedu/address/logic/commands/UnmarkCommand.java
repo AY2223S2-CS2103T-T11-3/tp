@@ -4,19 +4,12 @@ import static java.util.Objects.requireNonNull;
 import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
 import java.util.List;
-import java.util.Set;
 
 import seedu.address.commons.core.Messages;
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
-import seedu.address.model.contact.Contact;
-import seedu.address.model.person.Address;
 import seedu.address.model.person.Event;
-import seedu.address.model.person.Name;
-import seedu.address.model.person.Rate;
-import seedu.address.model.person.Time;
-import seedu.address.model.tag.Tag;
 
 /**
  * Unmarks an event identified using it's displayed index from the address book.

@@ -39,7 +39,7 @@ public class MarkCommandTest {
         String expectedMessage = String.format(MarkCommand.MESSAGE_MARK_EVENT_SUCCESS, eventToMark);
 
         ModelManager expectedModel = new ModelManager(model.getAddressBook(), model.getContactList(), new UserPrefs());
-        expectedModel.markEvent(eventToMark, markedEvent);
+        expectedModel.markEvent(eventToMark);
 
         assertCommandSuccess(markCommand, model, expectedMessage, expectedModel);
     }
@@ -63,7 +63,7 @@ public class MarkCommandTest {
         String expectedMessage = String.format(MarkCommand.MESSAGE_MARK_EVENT_SUCCESS, eventToMark);
 
         ModelManager expectedModel = new ModelManager(model.getAddressBook(), model.getContactList(), new UserPrefs());
-        expectedModel.markEvent(eventToMark, markedEvent);
+        expectedModel.markEvent(eventToMark);
 
         showNoPerson(expectedModel);
 

@@ -69,7 +69,7 @@ public class LinkContactCommandTest {
         Contact contact = model.getContactList().getContactList().get(0);
         Event markEvent = new PersonBuilder(event).build();
         markEvent.mark();
-        model.markEvent(event, markEvent);
+        model.markEvent(event);
         markEvent.linkContact(contact);
         LinkContactCommand linkContactCommand = new LinkContactCommand(INDEX_FIRST_PERSON, "94351253");
         Event linkEvent = linkContactCommand.createLinkedEvent(markEvent, contact);

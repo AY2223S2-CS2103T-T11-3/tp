@@ -39,7 +39,7 @@ public class UnmarkCommandTest {
         String expectedMessage = String.format(UnmarkCommand.MESSAGE_UNMARK_EVENT_SUCCESS, eventToUnmark);
 
         ModelManager expectedModel = new ModelManager(model.getAddressBook(), model.getContactList(), new UserPrefs());
-        expectedModel.unmarkEvent(eventToUnmark, unmarkedEvent);
+        expectedModel.unmarkEvent(eventToUnmark);
 
         assertCommandSuccess(unmarkCommand, model, expectedMessage, expectedModel);
     }
@@ -63,7 +63,7 @@ public class UnmarkCommandTest {
         String expectedMessage = String.format(UnmarkCommand.MESSAGE_UNMARK_EVENT_SUCCESS, eventToUnmark);
 
         ModelManager expectedModel = new ModelManager(model.getAddressBook(), model.getContactList(), new UserPrefs());
-        expectedModel.unmarkEvent(eventToUnmark, unmarkedEvent);
+        expectedModel.unmarkEvent(eventToUnmark);
 
         showNoPerson(expectedModel);
 

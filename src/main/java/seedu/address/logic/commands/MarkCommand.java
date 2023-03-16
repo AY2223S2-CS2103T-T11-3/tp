@@ -48,32 +48,9 @@ public class MarkCommand extends Command {
         }
 
         Event eventToUnmark = lastShownList.get(targetIndex.getZeroBased());
-        Event markedEvent = createUnmarkedEvent(eventToUnmark);
-        model.markEvent(eventToUnmark, markedEvent);
+        model.markEvent(eventToUnmark);
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
         return new CommandResult(String.format(MESSAGE_MARK_EVENT_SUCCESS, eventToUnmark));
-    }
-
-    /**
-     * Creates and returns a {@code Event} with the details of {@code eventToUnmark}
-     * edited with {@code editPersonDescriptor}.
-     */
-    private static Event createUnmarkedEvent(Event eventToUnmark) {
-        assert eventToUnmark != null;
-
-        Name updatedName = eventToUnmark.getName();
-        Rate updatedRate = eventToUnmark.getRate();
-        Address updatedAddress = eventToUnmark.getAddress();
-        Set<Tag> updatedTags = eventToUnmark.getTags();
-        Time updatedStartTime = eventToUnmark.getStartTime();
-        Time updatedEndTime = eventToUnmark.getEndTime();
-        Contact updatedContact = eventToUnmark.getContact();
-
-        Event updatedEvent = new Event(
-                updatedName, updatedRate, updatedAddress, updatedStartTime, updatedEndTime, updatedTags);
-        updatedEvent.mark();
-        updatedEvent.linkContact(updatedContact);
-        return updatedEvent;
     }
 
     @Override

@@ -402,7 +402,7 @@ The linkcontact feature will take in a contact number as a parameter. This param
     * Pros: Even easier to implement.
     * Cons: Hard to implement filtering of events by contact in the future.
 
-<img src="images/LinkContactActivityDiagram.png" width="180" />
+<img src="images/LinkContactActivityDiagram.png" width="200" />
 <div style="width:80%;margin:0">
     <b>Figure 3.5</b> Activity diagram of 'linkcontact'
 </div>
@@ -544,6 +544,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    * 2b1. System displays that the index is invalid and to try again.
 
       Use case resumes at step 2.
+
+<br>
 
 **Use case: UC3 - Mark Event**
 

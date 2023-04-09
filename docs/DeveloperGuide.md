@@ -195,6 +195,8 @@ The `Model` component,
 * stores a `UserPref` object that represents the user’s preferences. This is exposed to the outside as a `ReadOnlyUserPref` objects.
 * does not depend on any of the other three components (as the `Model` represents data entities of the domain, they should make sense on their own without depending on other components)
 
+<div style="page-break-after: always;"></div>
+
 ### Event component
 **API** : [`Event.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/model/event/Event.java)
 
@@ -218,6 +220,8 @@ The `Event` component,
 * when an event is created the above objects are created using user inputs and then the event object will be created.
 * the event will be added to the UniqueEventList.
 
+<div style="page-break-after: always;"></div>
+
 ### Contact component
 **API** : [`Contact.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/model/contact/Contact.java)
 
@@ -226,8 +230,6 @@ The `Event` component,
     <b>Figure 2.0</b> Class diagram of 'Contact'
 </div>
 <br>
-
-<div style="page-break-after: always;"></div>
 
 The `Contact` component,
 - it is made up of 2 objects the `ContactName` and `ContactPhone`

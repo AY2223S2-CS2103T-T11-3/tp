@@ -79,6 +79,8 @@ Given below is a quick overview of main components and how they interact with ea
 
 [**`Commons`**](#common-classes) represents a collection of classes used by multiple other components.
 
+<div style="page-break-after: always;"></div>
+
 The rest of the App consists of four components.
 
 * [**`UI`**](#ui-component): The UI of the App.

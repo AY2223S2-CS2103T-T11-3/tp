@@ -523,6 +523,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 1.
 
+<div style="page-break-after: always;"></div>
+
 **Use case: UC2 - Delete Event**
 
 **MSS**
@@ -545,8 +547,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
-<br>
-<br>
+<div style="page-break-after: always;"></div>
 
 **Use case: UC3 - Mark Event**
 
@@ -575,6 +576,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
+<div style="page-break-after: always;"></div>
+
 **Use case: UC4 - Unmark Event**
 
 **MSS**
@@ -602,6 +605,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
+<div style="page-break-after: always;"></div>
 
 **Use case: UC5 - List Events**
 
@@ -623,6 +627,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    * 2a1. System displays an empty list.
 
       Use case ends.
+
+<div style="page-break-after: always;"></div>
 
 **Use case: UC6 - Link contact and event**
 
@@ -678,6 +684,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2. -->
 
+<div style="page-break-after: always;"></div>
+
 **Use case: UC7 - Add Contact**
 
 **MSS**
@@ -698,6 +706,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    * 1b1. System displays that the input is invalid and to try again.
 
       Use case resumes at step 1.
+
+<div style="page-break-after: always;"></div>
 
 **Use case: UC8 - Add Date to Event**
 
@@ -731,6 +741,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
+<div style="page-break-after: always;"></div>
+
 **Use case: UC9 - Edit Event**
 
 **MSS**
@@ -757,6 +769,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    * 2c1. System displays that the format is invalid and to try again.
 
       Use case resumes at step 2.
+
+<div style="page-break-after: always;"></div>
 
 ### Non-Functional Requirements
 

@@ -140,7 +140,7 @@ The `UI` component,
 **API** : [`Logic.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/logic/Logic.java)
 Here's a (partial) class diagram of the `Logic` component:
 
-<img src="images/LogicClassDiagram.png" width="500"/>
+<img src="images/LogicClassDiagram.png" width="400"/>
 <div style="width:70%;margin:0">
     <b>Figure 1.5</b> Class diagram of 'Logic' component
 </div>

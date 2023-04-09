@@ -204,8 +204,6 @@ The `Model` component,
 </div>
 <br>
 
-<div style="page-break-after: always;"></div>
-
 The `Event` component,
 
 * stores each category of information of an event in individual attributes and each attribute is an object.

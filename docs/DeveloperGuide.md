@@ -121,6 +121,9 @@ The **API** of this component is specified in [`Ui.java`](https://github.com/AY2
     <b>Figure 1.4</b> Class diagram of UI
 </div>
 <br>
+
+<div style="page-break-after: always;"></div>
+
 The UI consists of a `MainWindow` that is made up of parts e.g.`CommandBox`, `ResultDisplay`, `EventListPanel`, `StatusBarFooter` etc. All these, including the `MainWindow`, inherit from the abstract `UiPart` class which captures the commonalities between classes that represent parts of the visible GUI.
 
 The `UI` component uses the JavaFx UI framework. The layout of these UI parts are defined in matching `.fxml` files that are in the `src/main/resources/view` folder. For example, the layout of the [`MainWindow`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/ui/MainWindow.java) is specified in [`MainWindow.fxml`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/resources/view/MainWindow.fxml)
@@ -137,8 +140,8 @@ The `UI` component,
 **API** : [`Logic.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/logic/Logic.java)
 Here's a (partial) class diagram of the `Logic` component:
 
-<img src="images/LogicClassDiagram.png" width="550"/>
-<div style="width:80%;margin:0">
+<img src="images/LogicClassDiagram.png" width="500"/>
+<div style="width:70%;margin:0">
     <b>Figure 1.5</b> Class diagram of 'Logic' component
 </div>
 <br>

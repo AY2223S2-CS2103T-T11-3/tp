@@ -146,6 +146,7 @@ Here's a (partial) class diagram of the `Logic` component:
 </div>
 <br>
 
+<div style="page-break-after: always;"></div>
 
 How the `Logic` component works:
 1. When `Logic` is called upon to execute a command, it uses the `EventBookParser` class to parse the user command.
@@ -163,6 +164,8 @@ The Sequence Diagram below illustrates the interactions within the `Logic` compo
 <div markdown="span" class="alert alert-info">:information_source: **Note:** The lifeline for `DeleteCommandParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
 </div>
 
+<div style="page-break-after: always;"></div>
+
 Here are the other classes in `Logic` (omitted from the class diagram above) that are used for parsing a user command:
 
 <img src="images/ParserClasses.png" width="600"/>
@@ -173,6 +176,8 @@ Here are the other classes in `Logic` (omitted from the class diagram above) tha
 How the parsing works:
 * When called upon to parse a user command, the `EventBookParser` class creates an `XYZCommandParser` (`XYZ` is a placeholder for the specific command name e.g., `AddCommandParser`) which uses the other classes shown above to parse the user command and create a `XYZCommand` object (e.g., `AddCommand`) which the `EventBookParser` returns back as a `Command` object.
 * All `XYZCommandParser` classes (e.g., `AddCommandParser`, `DeleteCommandParser`, ...) inherit from the `Parser` interface so that they can be treated similarly where possible e.g, during testing.
+
+<div style="page-break-after: always;"></div>
 
 ### Model component
 **API** : [`Model.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/model/Model.java)
@@ -199,6 +204,8 @@ The `Model` component,
 </div>
 <br>
 
+<div style="page-break-after: always;"></div>
+
 The `Event` component,
 
 * stores each category of information of an event in individual attributes and each attribute is an object.
@@ -222,11 +229,14 @@ The `Event` component,
 </div>
 <br>
 
+<div style="page-break-after: always;"></div>
+
 The `Contact` component,
 - it is made up of 2 objects the `ContactName` and `ContactPhone`
 - both objects are created using user input.
 - the contact will be added into the UniqueContactList.
 
+<div style="page-break-after: always;"></div>
 
 ### Storage component
 

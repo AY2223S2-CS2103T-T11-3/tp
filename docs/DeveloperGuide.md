@@ -281,7 +281,7 @@ The `newcontact` feature is facilitated by the `Contact` class. The feature is i
     * Pros: Easy to code.
     * Cons: Might be hard to keep track or do comparisons with.
 
-<img src="images/NewContactActivityDiagram.png" width="200" />
+<img src="images/NewContactActivityDiagram.png" width="230" />
 <div style="width:80%;margin:0">
     <b>Figure 3.1</b> Activity diagram of 'New Contact'
 </div>
@@ -311,7 +311,7 @@ The `mark` feature is implemented with the following considerations:
 
 Below shows the activity diagram of the `mark` command:
 
-<img src="images/MarkActivityDiagram.png" width="80" />
+<img src="images/MarkActivityDiagram.png" width="120" />
 <div style="width:80%;margin:0">
     <b>Figure 3.2</b> Activity diagram of 'Mark'
 </div>
@@ -343,7 +343,7 @@ The `unmark` feature is implemented with the following considerations:
 
 Below shows the activity diagram of the `unmark` command:
 
-<img src="images/UnmarkActivityDiagram.png" width="80" />
+<img src="images/UnmarkActivityDiagram.png" width="120" />
 <div style="width:80%;margin:0">
     <b>Figure 3.3</b> Activity diagram of 'Unmark'
 </div>
@@ -435,6 +435,7 @@ Below shows the activity diagram of the `revenue` command:
 <div style="width:80%;margin:0">
     <b>Figure 3.6</b> Activity diagram of 'Revenue'
 </div>
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Appendix: Requirements
@@ -500,6 +501,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 | `*`      | Goal oriented user | Set goals                                        | I can look at my goals                               |
 | `*`      | Forgetful User      | Set reminders/checklist for events               | I can remember things to bring etc.                  |
 
+<div style="page-break-after: always;"></div>
 
 ### Use cases
 

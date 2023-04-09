@@ -242,7 +242,7 @@ The `Contact` component,
 
 **API** : [`Storage.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/storage/Storage.java)
 
-<img src="images/StorageClassDiagram.png" width="550" />
+<img src="images/StorageClassDiagram.png" width="400" />
 
 The `Storage` component,
 * can save both event book data and user preference data in json format, and read them back into corresponding objects.
@@ -254,6 +254,7 @@ The `Storage` component,
 Classes used by multiple components are in the `seedu.eventbook.commons` package.
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## Implementation
 

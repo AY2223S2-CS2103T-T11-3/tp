@@ -869,9 +869,9 @@ testers are expected to do more *exploratory* testing.
 6. The current contact book does not allow deleting of contacts. We plan to implement a `delete` method for deleting contacts.
 
 
-<div style="position: fixed; font-size: large; bottom: 25px; right: 50px; background-color: #d8d8d8">
+<!-- <div style="position: fixed; font-size: large; bottom: 25px; right: 50px; background-color: #d8d8d8">
   <a href="#top">Back to top</a>
 </div>
-<br>
-
+<br> -->
+<a href="#top">Back to top</a>
 

@@ -343,7 +343,7 @@ The `unmark` feature is implemented with the following considerations:
 
 Below shows the activity diagram of the `unmark` command:
 
-<img src="images/UnmarkActivityDiagram.png" width="120" />
+<img src="images/UnmarkActivityDiagram.png" width="110" />
 <div style="width:80%;margin:0">
     <b>Figure 3.3</b> Activity diagram of 'Unmark'
 </div>
@@ -402,7 +402,7 @@ The linkcontact feature will take in a contact number as a parameter. This param
     * Pros: Even easier to implement.
     * Cons: Hard to implement filtering of events by contact in the future.
 
-<img src="images/LinkContactActivityDiagram.png" width="130" />
+<img src="images/LinkContactActivityDiagram.png" width="180" />
 <div style="width:80%;margin:0">
     <b>Figure 3.5</b> Activity diagram of 'linkcontact'
 </div>

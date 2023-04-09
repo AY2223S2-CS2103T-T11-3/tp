@@ -242,7 +242,7 @@ The `Contact` component,
 
 **API** : [`Storage.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/storage/Storage.java)
 
-<img src="images/StorageClassDiagram.png" width="400" />
+<img src="images/StorageClassDiagram.png" width="450" />
 
 The `Storage` component,
 * can save both event book data and user preference data in json format, and read them back into corresponding objects.
@@ -281,10 +281,12 @@ The `newcontact` feature is facilitated by the `Contact` class. The feature is i
     * Pros: Easy to code.
     * Cons: Might be hard to keep track or do comparisons with.
 
-<img src="images/NewContactActivityDiagram.png" width="400" />
+<img src="images/NewContactActivityDiagram.png" width="300" />
 <div style="width:80%;margin:0">
     <b>Figure 3.1</b> Activity diagram of 'New Contact'
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Mark feature
 
@@ -313,6 +315,8 @@ Below shows the activity diagram of the `mark` command:
 <div style="width:80%;margin:0">
     <b>Figure 3.2</b> Activity diagram of 'Mark'
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Unmark feature
 
@@ -344,6 +348,8 @@ Below shows the activity diagram of the `unmark` command:
     <b>Figure 3.3</b> Activity diagram of 'Unmark'
 </div>
 
+<div style="page-break-after: always;"></div>
+
 ### Reminder feature
 The `remind` feature allows for users to view upcoming events.
 
@@ -369,6 +375,7 @@ The following object diagram shows objects involved in the execution of a <b>rem
     * Pros: Less coupling between classes.
     * Cons: Difficult to test, as the current time is based on real time.
 
+<div style="page-break-after: always;"></div>
 
 ### Linkcontact feature
 
@@ -399,6 +406,8 @@ The linkcontact feature will take in a contact number as a parameter. This param
 <div style="width:80%;margin:0">
     <b>Figure 3.5</b> Activity diagram of 'linkcontact'
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Revenue feature
 

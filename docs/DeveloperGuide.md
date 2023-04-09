@@ -815,7 +815,7 @@ testers are expected to do more *exploratory* testing.
    1. Test case: `delete 0`<br>
       Expected: No event is deleted. Error details shown in the status message.
 
-
+<div style="page-break-after: always;"></div>
 
 ### Adding an event
 
@@ -853,6 +853,8 @@ testers are expected to do more *exploratory* testing.
 
    1. Test case:  `mark`<br>
    Expected: No event marked. Error details shown in the status message.
+
+<div style="page-break-after: always;"></div>
 
 ### Unmark Event
 

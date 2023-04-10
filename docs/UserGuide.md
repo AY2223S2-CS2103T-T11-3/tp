@@ -20,6 +20,8 @@ typists to get event management tasks done faster than traditional GUI apps!
 
 This user guide will help you get up to speed in no time!
 
+<div style="page-break-after: always;"></div>
+
 ## Table of Contents
 - [Using the examples in this Guide](#using-the-examples-in-this-guide)
 - [User Interface](#user-interface)
@@ -50,6 +52,8 @@ This user guide will help you get up to speed in no time!
 
 --------------------------------------------------------------------------------------------------------------------
 
+<div style="page-break-after: always;"></div>
+
 ## Using the examples in this Guide
 The examples given in this guide are formatted with the following conventions:
 
@@ -75,6 +79,9 @@ The examples given in this guide are formatted with the following conventions:
 - The expected action of this command is written behind.
 
 --------------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-after: always;"></div>
+
 ## User Interface
 
 At Paidlancers, we understand that time is money, and every second matters for freelancers.
@@ -137,6 +144,8 @@ interface (GUI) with icons and menus!
 8. Happy ~~free~~Paidlancing!
 
 --------------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-after: always;"></div>
 
 ## Features
 

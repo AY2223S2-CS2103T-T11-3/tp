@@ -696,7 +696,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 1.  User requests to add a contact to an event.
 2.  System adds the contact to the event and displays information of the contact and event.
 
-   Use case ends.
+      Use case ends.
 
 **Extensions**
 

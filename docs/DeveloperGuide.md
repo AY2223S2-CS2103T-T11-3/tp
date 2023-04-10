@@ -268,7 +268,7 @@ The `newcontact` feature allows for users to add new contacts to their contact l
 #### Implementation
 
 The `newcontact` feature is facilitated by the `Contact` class. The feature is implemented as follows:
-- encapsulate two attributes of a contact with the help of `ContactName` and `ContactPhone` class.
+- Encapsulate two attributes of a contact with the help of `ContactName` and `ContactPhone` class.
 - Phone number should only be numerical and shall not be shorter than 8 digits.
 - A contact is unique to its `ContactPhone`, having the same phone number will result in an error.
 - Once a new contact is created it will be added to the contact list which will be saved in a JSON file.

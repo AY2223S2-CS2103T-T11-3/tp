@@ -206,8 +206,6 @@ This is a destructive command. Once you clear all events and contacts, there is 
 Please be careful when using this command.
 </div>
 
-<div style="page-break-after: always;"></div>
-
 ### Create new Event: `newevent` <a id = "create-new-event"></a>
 
 This command will add a new event into Paidlancers.
@@ -253,6 +251,8 @@ You can delete specified events in Paidlancers.
   ````
   Deleted Event: DJ at wedding; Rate: 100.00; Address: 311, Clementi Ave 2, #02-25; Timing: 11-03-2023 11:00 to 11-03-2023 17:00; Mark: [ ]; Tags: [dj][friends]
   ````
+
+<div style="page-break-after: always;"></div>
 
 <!-- ![BeforeDelete](images/DeleteBefore.png) -->
 <img src="images/DeleteBefore.png" width="600" />
@@ -413,7 +413,9 @@ You may wish to indicate that an event has been completed using this command!
   ````
   Marked event: Wedding Lunch; Rate: 100.00; Address: 311, Clementi Ave 2, #02-25; Timing: 11-03-2023 11:00 to 11-03-2023 17:00; Mark: [X]; Contact: Gladious Lee; Phone: 92348274
   ````
-  
+
+<div style="page-break-after: always;"></div>
+
 <!-- ![BeforeMark](images/MarkBefore.png) -->
 <img src="images/MarkBefore.png" width="600" />
 
@@ -459,6 +461,8 @@ Displays the total revenue based on all the events marked as done.
   The total revenue is: 200.00
   ````
 
+<div style="page-break-after: always;"></div>
+
 ### View Upcoming Events: `remind` <a id = "view-upcoming-events"></a>
 
 Displays events that start within a specified number of days.
@@ -492,6 +496,8 @@ Paidlancers data are saved in the hard disk automatically on command issue. Ther
 
 
 --------------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-after: always;"></div>
 
 ## FAQ
 

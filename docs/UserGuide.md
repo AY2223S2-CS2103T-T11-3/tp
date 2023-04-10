@@ -180,14 +180,18 @@ viewing events.
     New contact added: Tan Jun Wei; Phone: 82828234
   ````
   
-<!-- ![BeforeAdding](images/NewContactBefore.png) 
-Before adding Deborah Tan into the contact list -->
-<img src="images/NewContactBefore.png" width="500" />
+<!-- ![BeforeAdding](images/NewContactBefore.png)  -->
+<img src="images/NewContactBefore.png" width="700" />
 <div style="width:80%;margin:0">
     <b>Figure 3.5</b> Activity diagram of 'linkcontact'
 </div>
+Before adding Deborah Tan into the contact list
 
-![AfterAdding](images/NewContactAfter.png)
+<!-- ![AfterAdding](images/NewContactAfter.png) -->
+<img src="images/NewContactAfter.png" width="700" />
+<div style="width:80%;margin:0">
+    <b>Figure 3.5</b> Activity diagram of 'linkcontact'
+</div>
 After adding Deborah Tan into the contact list
 
 ### Clear all Events and Contacts: `clear` <a id = "clear-all-events"></a>

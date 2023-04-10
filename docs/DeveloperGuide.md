@@ -759,7 +759,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * **Mainstream OS**: Windows, Linux, Unix, macOS
 * **Command Line Interface (CLI)**: A text-based user interface (UI) used to run programs, manage computer files and interact with the computer
 * **User Interface (UI)**: A form of user interface that allows users to interact with electronic devices through graphical icons
-* **Mainstream OS**: Windows, Linux, Unix, OS-X
 * **Event**: A freelancing gig
 
 --------------------------------------------------------------------------------------------------------------------

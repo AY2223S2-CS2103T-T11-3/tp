@@ -182,10 +182,12 @@ viewing events.
   
 <!-- ![BeforeAdding](images/NewContactBefore.png)  -->
 <img src="images/NewContactBefore.png" width="600" />
+
 Before adding Deborah Tan into the contact list
 
 <!-- ![AfterAdding](images/NewContactAfter.png) -->
 <img src="images/NewContactAfter.png" width="600" />
+
 After adding Deborah Tan into the contact list
 
 ### Clear all Events and Contacts: `clear` <a id = "clear-all-events"></a>

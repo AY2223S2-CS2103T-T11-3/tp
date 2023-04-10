@@ -43,6 +43,7 @@ title: Developer Guide
 - [Appendix: Planned Enhancements](#appendix-planned-enhancements)
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## Acknowledgements
 
@@ -55,9 +56,9 @@ title: Developer Guide
 Refer to the guide [_Setting up and getting started_](SettingUp.md).
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## Design
-
 ### Architecture
 
 <img src="images/ArchitectureDiagram.png" width="280" />
@@ -76,6 +77,8 @@ Given below is a quick overview of main components and how they interact with ea
 * At shut down: Shuts down the components and invokes cleanup methods where necessary.
 
 [**`Commons`**](#common-classes) represents a collection of classes used by multiple other components.
+
+<div style="page-break-after: always;"></div>
 
 The rest of the App consists of four components.
 
@@ -118,6 +121,9 @@ The **API** of this component is specified in [`Ui.java`](https://github.com/AY2
     <b>Figure 1.4</b> Class diagram of UI
 </div>
 <br>
+
+<div style="page-break-after: always;"></div>
+
 The UI consists of a `MainWindow` that is made up of parts e.g.`CommandBox`, `ResultDisplay`, `EventListPanel`, `StatusBarFooter` etc. All these, including the `MainWindow`, inherit from the abstract `UiPart` class which captures the commonalities between classes that represent parts of the visible GUI.
 
 The `UI` component uses the JavaFx UI framework. The layout of these UI parts are defined in matching `.fxml` files that are in the `src/main/resources/view` folder. For example, the layout of the [`MainWindow`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/ui/MainWindow.java) is specified in [`MainWindow.fxml`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/resources/view/MainWindow.fxml)
@@ -134,12 +140,13 @@ The `UI` component,
 **API** : [`Logic.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/logic/Logic.java)
 Here's a (partial) class diagram of the `Logic` component:
 
-<img src="images/LogicClassDiagram.png" width="550"/>
-<div style="width:80%;margin:0">
+<img src="images/LogicClassDiagram.png" width="400"/>
+<div style="width:70%;margin:0">
     <b>Figure 1.5</b> Class diagram of 'Logic' component
 </div>
 <br>
 
+<div style="page-break-after: always;"></div>
 
 How the `Logic` component works:
 1. When `Logic` is called upon to execute a command, it uses the `EventBookParser` class to parse the user command.
@@ -154,8 +161,10 @@ The Sequence Diagram below illustrates the interactions within the `Logic` compo
     <b>Figure 1.6</b> Sequence diagram of 'Logic' component
 </div>
 <br>
-<div markdown="span" class="alert alert-info">:information_source: **Note:** The lifeline for `DeleteCommandParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+<div markdown="span" class="alert alert-info">:information_source: Note: The lifeline for `DeleteCommandParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
 </div>
+
+<div style="page-break-after: always;"></div>
 
 Here are the other classes in `Logic` (omitted from the class diagram above) that are used for parsing a user command:
 
@@ -164,9 +173,12 @@ Here are the other classes in `Logic` (omitted from the class diagram above) tha
     <b>Figure 1.7</b> Class diagram of 'Logic''
 </div>
 <br>
+
 How the parsing works:
 * When called upon to parse a user command, the `EventBookParser` class creates an `XYZCommandParser` (`XYZ` is a placeholder for the specific command name e.g., `AddCommandParser`) which uses the other classes shown above to parse the user command and create a `XYZCommand` object (e.g., `AddCommand`) which the `EventBookParser` returns back as a `Command` object.
 * All `XYZCommandParser` classes (e.g., `AddCommandParser`, `DeleteCommandParser`, ...) inherit from the `Parser` interface so that they can be treated similarly where possible e.g, during testing.
+
+<div style="page-break-after: always;"></div>
 
 ### Model component
 **API** : [`Model.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/model/Model.java)
@@ -183,6 +195,8 @@ The `Model` component,
 * stores the currently 'selected' `Event` objects (e.g., results of a search query) as a separate _filtered_ list which is exposed to outsiders as an unmodifiable `ObservableList<Event>` that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.
 * stores a `UserPref` object that represents the user’s preferences. This is exposed to the outside as a `ReadOnlyUserPref` objects.
 * does not depend on any of the other three components (as the `Model` represents data entities of the domain, they should make sense on their own without depending on other components)
+
+<div style="page-break-after: always;"></div>
 
 ### Event component
 **API** : [`Event.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/model/event/Event.java)
@@ -207,6 +221,8 @@ The `Event` component,
 * when an event is created the above objects are created using user inputs and then the event object will be created.
 * the event will be added to the UniqueEventList.
 
+<div style="page-break-after: always;"></div>
+
 ### Contact component
 **API** : [`Contact.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/model/contact/Contact.java)
 
@@ -221,12 +237,13 @@ The `Contact` component,
 - both objects are created using user input.
 - the contact will be added into the UniqueContactList.
 
+<div style="page-break-after: always;"></div>
 
 ### Storage component
 
 **API** : [`Storage.java`](https://github.com/AY2223S2-CS2103T-T11-3/tp/blob/master/src/main/java/seedu/event/storage/Storage.java)
 
-<img src="images/StorageClassDiagram.png" width="550" />
+<img src="images/StorageClassDiagram.png" width="450" />
 
 The `Storage` component,
 * can save both event book data and user preference data in json format, and read them back into corresponding objects.
@@ -238,6 +255,7 @@ The `Storage` component,
 Classes used by multiple components are in the `seedu.eventbook.commons` package.
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## Implementation
 
@@ -250,7 +268,7 @@ The `newcontact` feature allows for users to add new contacts to their contact l
 #### Implementation
 
 The `newcontact` feature is facilitated by the `Contact` class. The feature is implemented as follows:
-- encapsulate two attributes of a contact with the help of `ContactName` and `ContactPhone` class.
+- Encapsulate two attributes of a contact with the help of `ContactName` and `ContactPhone` class.
 - Phone number should only be numerical and shall not be shorter than 8 digits.
 - A contact is unique to its `ContactPhone`, having the same phone number will result in an error.
 - Once a new contact is created it will be added to the contact list which will be saved in a JSON file.
@@ -264,10 +282,12 @@ The `newcontact` feature is facilitated by the `Contact` class. The feature is i
     * Pros: Easy to code.
     * Cons: Might be hard to keep track or do comparisons with.
 
-<img src="images/NewContactActivityDiagram.png" width="400" />
+<img src="images/NewContactActivityDiagram.png" width="230" />
 <div style="width:80%;margin:0">
     <b>Figure 3.1</b> Activity diagram of 'New Contact'
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Mark feature
 
@@ -292,10 +312,12 @@ The `mark` feature is implemented with the following considerations:
 
 Below shows the activity diagram of the `mark` command:
 
-<img src="images/MarkActivityDiagram.png" width="200" />
+<img src="images/MarkActivityDiagram.png" width="120" />
 <div style="width:80%;margin:0">
     <b>Figure 3.2</b> Activity diagram of 'Mark'
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Unmark feature
 
@@ -322,10 +344,12 @@ The `unmark` feature is implemented with the following considerations:
 
 Below shows the activity diagram of the `unmark` command:
 
-<img src="images/UnmarkActivityDiagram.png" width="200" />
+<img src="images/UnmarkActivityDiagram.png" width="110" />
 <div style="width:80%;margin:0">
     <b>Figure 3.3</b> Activity diagram of 'Unmark'
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Reminder feature
 The `remind` feature allows for users to view upcoming events.
@@ -354,6 +378,8 @@ The `reminder` feature is implemented with the following considerations:
     <b>Figure 3.4</b> Object diagram of objects involved in the execution of a 'remind' command
 </div>
 
+<div style="page-break-after: always;"></div>
+
 ### Linkcontact feature
 
 The link contact feature allows users to link a contact to an event.
@@ -379,10 +405,12 @@ The linkcontact feature will take in a contact number as a parameter. This param
     * Pros: Even easier to implement.
     * Cons: Hard to implement filtering of events by contact in the future.
 
-<img src="images/LinkContactActivityDiagram.png" width="430" />
+<img src="images/LinkContactActivityDiagram.png" width="200" />
 <div style="width:80%;margin:0">
     <b>Figure 3.5</b> Activity diagram of 'linkcontact'
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Revenue feature
 
@@ -410,6 +438,7 @@ Below shows the activity diagram of the `revenue` command:
 <div style="width:80%;margin:0">
     <b>Figure 3.6</b> Activity diagram of 'Revenue'
 </div>
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Appendix: Requirements
@@ -475,6 +504,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 | `*`      | Goal oriented user | Set goals                                        | I can look at my goals                               |
 | `*`      | Forgetful User      | Set reminders/checklist for events               | I can remember things to bring etc.                  |
 
+<div style="page-break-after: always;"></div>
 
 ### Use cases
 
@@ -484,8 +514,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1.  User requests to add an event together with its information.
-2.  System adds the event and displays information of the event added.
+1. User requests to add an event together with its information.
+2. System adds the event and displays information of the event added.
 
    Use case ends.
 
@@ -494,7 +524,9 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * 1a. User enters the wrong command.
    * 1a1. System displays that the command is invalid and to try again.
 
-      Use case resumes at step 1.
+   Use case resumes at step 1.
+
+<div style="page-break-after: always;"></div>
 
 **Use case: UC2 - Delete Event**
 
@@ -517,6 +549,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    * 2b1. System displays that the index is invalid and to try again.
 
       Use case resumes at step 2.
+
+<div style="page-break-after: always;"></div>
 
 **Use case: UC3 - Mark Event**
 
@@ -545,6 +579,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
+<div style="page-break-after: always;"></div>
+
 **Use case: UC4 - Unmark Event**
 
 **MSS**
@@ -572,6 +608,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
+<div style="page-break-after: always;"></div>
 
 **Use case: UC5 - List Events**
 
@@ -593,6 +630,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    * 2a1. System displays an empty list.
 
       Use case ends.
+
+<div style="page-break-after: always;"></div>
 
 **Use case: UC6 - Link contact and event**
 
@@ -648,6 +687,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2. -->
 
+<div style="page-break-after: always;"></div>
+
 **Use case: UC7 - Add Contact**
 
 **MSS**
@@ -669,39 +710,9 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 1.
 
-**Use case: UC8 - Add Date to Event**
+<div style="page-break-after: always;"></div>
 
-**MSS**
-
-1. User <u>lists events (UC5)</u>.
-2. User requests to add a date to a specified event in the list.
-3. System adds the date to the event and displays information of the event with new date added.
-
-   Use case ends.
-
-**Extensions**
-
- 2a. User enters the wrong command.
-   * 2a1. System displays that the command is invalid and to try again.
-
-      Use case resumes at step 2.
-
-* 2b. User enters an invalid index.
-   * 2b1. System displays that the index is invalid and to try again.
-
-      Use case resumes at step 2.
-
-* 2c. User enters an invalid date.
-   * 2c1. System displays that the date is invalid and to try again.
-
-      Use case resumes at step 2.
-
-* 3a. The event has a date linked already.
-   * 3a1. System replaces the previous date with the new date.
-
-      Use case ends.
-
-**Use case: UC9 - Edit Event**
+**Use case: UC8 - Edit Event**
 
 **MSS**
 
@@ -728,6 +739,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
+<div style="page-break-after: always;"></div>
+
 ### Non-Functional Requirements
 
 1. Should work on any _mainstream OS_ as long as it has Java `11` or above installed.
@@ -743,16 +756,21 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Glossary
 
-* **Mainstream OS**: Windows, Linux, Unix, OS-X
+* **Mainstream OS**: Windows, Linux, Unix, macOS
+* **Command Line Interface (CLI)**: A text-based user interface (UI) used to run programs, manage computer files and interact with the computer
+* **User Interface (UI)**: A form of user interface that allows users to interact with electronic devices through graphical icons
+* **Event**: A freelancing gig
 
 --------------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-after: always;"></div>
 
 ## Appendix: Instructions for manual testing
 
 Given below are instructions to test the app manually.
 
-<div markdown="span" class="alert alert-info">:information_source: **Note:** These instructions only provide a starting point for testers to work on;
-testers are expected to do more *exploratory* testing.
+<div markdown="span" class="alert alert-info">:information_source: Note: These instructions only provide a starting point for testers to work on;
+testers are expected to do more exploratory testing.
 
 </div>
 
@@ -762,7 +780,8 @@ testers are expected to do more *exploratory* testing.
 
    1. Download the jar file and copy into an empty folder
 
-   1. Double-click the jar file Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.
+   1. Open the jar file java using command `java -jar Paidlancers.jar`
+       Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.
 
 1. Saving window preferences
 
@@ -771,7 +790,6 @@ testers are expected to do more *exploratory* testing.
    1. Re-launch the app by double-clicking the jar file.<br>
        Expected: The most recent window size and location is retained.
 
-1. _{ more test cases …​ }_
 
 ### Deleting an event
 
@@ -783,7 +801,7 @@ testers are expected to do more *exploratory* testing.
    1. Test case: `delete 0`<br>
       Expected: No event is deleted. Error details shown in the status message.
 
-
+<div style="page-break-after: always;"></div>
 
 ### Adding an event
 
@@ -822,6 +840,8 @@ testers are expected to do more *exploratory* testing.
    1. Test case:  `mark`<br>
    Expected: No event marked. Error details shown in the status message.
 
+<div style="page-break-after: always;"></div>
+
 ### Unmark Event
 
 1. Prerequisites: List all events using the list command. Multiple events in the list.
@@ -850,11 +870,7 @@ testers are expected to do more *exploratory* testing.
    1. Test case: `remind -1` <br>
    Expected: No filtered display shown. Error details shown in the status message.
 
-## Glossary
-* **Command Line Interface (CLI)**: A text-based user interface (UI) used to run programs, manage computer files and interact with the computer
-* **User Interface (UI)**: A form of user interface that allows users to interact with electronic devices through graphical icons
-* **Mainstream OS**: Windows, Linux, Unix, OS-X
-* **Event**: A freelancing gig
+<div style="page-break-after: always;"></div>
 
 ## Appendix: Planned Enhancements
 1. The current `newevent` and `edit` commands allows an event's start time to be after its end time. We plan to only allow an event to be added or successfully edited if its start time is before or the same as its end time, with an error message `Start time must be before end time.` being shown otherwise.
@@ -870,9 +886,9 @@ testers are expected to do more *exploratory* testing.
 6. The current contact book does not allow deleting of contacts. We plan to implement a `delete` method for deleting contacts.
 
 
-<div style="position: fixed; font-size: large; bottom: 25px; right: 50px; background-color: #d8d8d8">
+<!-- <div style="position: fixed; font-size: large; bottom: 25px; right: 50px; background-color: #d8d8d8">
   <a href="#top">Back to top</a>
 </div>
-<br>
-
+<br> -->
+<a href="#top">Back to top</a>
 

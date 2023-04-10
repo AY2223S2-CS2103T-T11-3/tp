@@ -190,6 +190,8 @@ Before adding Deborah Tan into the contact list
 
 After adding Deborah Tan into the contact list
 
+<div style="page-break-after: always;"></div>
+
 ### Clear all Events and Contacts: `clear` <a id = "clear-all-events"></a>
 
 This command will clear all events in Paidlancers.
@@ -203,6 +205,8 @@ once you get familiarized with Paidlancers!
 This is a destructive command. Once you clear all events and contacts, there is no way to recover them!
 Please be careful when using this command.
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Create new Event: `newevent` <a id = "create-new-event"></a>
 
@@ -227,6 +231,7 @@ You may wish to use this command to add new events into Paidlancers.
   New event added: DJ at wedding; Rate: 100.00; Address: 311, Clementi Ave 2, #02-25; Timing: 11-03-2023 11:00 to 11-03-2023 17:00; Mark: [ ]; Tags: [dj][friends]
   ````
 
+<div style="page-break-after: always;"></div>
 
 ### Delete an Event: `delete` <a id = "delete-an-event"></a>
 
@@ -249,11 +254,17 @@ You can delete specified events in Paidlancers.
   Deleted Event: DJ at wedding; Rate: 100.00; Address: 311, Clementi Ave 2, #02-25; Timing: 11-03-2023 11:00 to 11-03-2023 17:00; Mark: [ ]; Tags: [dj][friends]
   ````
 
-![BeforeDelete](images/DeleteBefore.png)
+<!-- ![BeforeDelete](images/DeleteBefore.png) -->
+<img src="images/DeleteBefore.png" width="600" />
+
 Before deleting 2nd event
 
-![AfterDelete](images/DeleteAfter.png)
+<!-- ![AfterDelete](images/DeleteAfter.png) -->
+<img src="images/DeleteAfter.png" width="600" />
+
 After deleting 2nd event
+
+<div style="page-break-after: always;"></div>
 
 ### Edit an Event: `edit` <a id = "edit-an-event"></a>
 
@@ -296,12 +307,17 @@ This command is helpful if you have made any mistakes when creating the event.
   Edited Event: Wedding Lunch; Rate: 100.00; Address: 311, Clementi Ave 2, #02-25; Timing: 11-03-2023 11:00 to 11-03-2023 17:00; Mark: [ ]
   ````
   
-![BeforeEdit](images/EditBefore.png)
+<!-- ![BeforeEdit](images/EditBefore.png) -->
+<img src="images/EditBefore.png" width="600" />
+
 Before editing 1st event to Wedding Dinner Photography at Carlton Hotel ballroom
 
-![AfterEdit](images/EditAfter.png)
+<!-- ![AfterEdit](images/EditAfter.png) -->
+<img src="images/EditAfter.png" width="600" />
+
 After editing 1st event to Wedding Dinner Photography at Carlton Hotel ballroom
 
+<div style="page-break-after: always;"></div>
 
 ### Exit application: `exit` <a id = "exit-application"></a>
 
@@ -309,6 +325,11 @@ This command will close Paidlancers! Alternatively, you may wish to exit through
 
 **Format**: `exit`
 
+### List all Events: `list` <a id = "list-all-events"></a>
+
+Displays all events.
+
+**Format**: `list`
 
 ### Find Event: `find` <a id = "find-event"></a>
 
@@ -331,6 +352,8 @@ You can use this command to search through the event list.
   - This command will find and list all events that contains 'wedding' in its name.
 - `find wedding dinner`
   - This command will find and list all events that contains 'wedding' or 'dinner' in its name.
+
+<div style="page-break-after: always;"></div>
 
 ### Link Contact to Event: `linkcontact` <a id = "link-contact-to-event"></a>
 
@@ -356,17 +379,17 @@ You may wish to link a contact to an event if you have already added the contact
   Successfully linked! Wedding Lunch; Rate: 100.00; Address: 311, Clementi Ave 2, #02-25; Timing: 11-03-2023 11:00 to 11-03-2023 17:00; Mark: [ ]
   ````
 
-![LinkcontactBefore](images/LinkcontactBefore.png)
+<!-- ![LinkcontactBefore](images/LinkcontactBefore.png) -->
+<img src="images/LinkcontactBefore.png" width="600" />
+
 Before linking 2nd event to contact with phone number 91234567
 
-![LinkcontactAfter](images/LinkcontactAfter.png)
+<!-- ![LinkcontactAfter](images/LinkcontactAfter.png) -->
+<img src="images/LinkcontactAfter.png" width="600" />
+
 After linking 2nd event to contact with phone number 91234567
 
-### List all Events: `list` <a id = "list-all-events"></a>
-
-Displays all events.
-
-**Format**: `list`
+<div style="page-break-after: always;"></div>
 
 ### Mark Event as Done: `mark` <a id = "mark-event"></a>
 
@@ -391,12 +414,17 @@ You may wish to indicate that an event has been completed using this command!
   Marked event: Wedding Lunch; Rate: 100.00; Address: 311, Clementi Ave 2, #02-25; Timing: 11-03-2023 11:00 to 11-03-2023 17:00; Mark: [X]; Contact: Gladious Lee; Phone: 92348274
   ````
   
-![BeforeMark](images/MarkBefore.png)
+<!-- ![BeforeMark](images/MarkBefore.png) -->
+<img src="images/MarkBefore.png" width="600" />
+
 Before marking 1st event
 
-![AfterMark](images/MarkAfter.png)
+<!-- ![AfterMark](images/MarkAfter.png) -->
+<img src="images/MarkAfter.png" width="600" />
+
 After marking 1st event
 
+<div style="page-break-after: always;"></div>
 
 ### Unmark an Event: `unmark` <a id = "unmark-event"></a>
 

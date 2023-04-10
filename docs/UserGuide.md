@@ -543,7 +543,9 @@ that you may need a GitHub account to do so.)
 We value your feedback and are always looking for ways to improve our product and user experience. Thank you for
 using Paidlancers, and we look forward to serving you in the future. All the best fellow Paidlancers! :muscle:
 
-<div style="position: fixed; font-size: large; bottom: 25px; right: 50px; background-color: #d8d8d8">
+<!-- <div style="position: fixed; font-size: large; bottom: 25px; right: 50px; background-color: #d8d8d8">
   <a href="#top">Back to top</a>
 </div>
-<br>
+<br> -->
+
+<a href="#top">Back to top</a>

@@ -871,6 +871,8 @@ testers are expected to do more exploratory testing.
    1. Test case: `remind -1` <br>
    Expected: No filtered display shown. Error details shown in the status message.
 
+<div style="page-break-after: always;"></div>
+
 ## Appendix: Planned Enhancements
 1. The current `newevent` and `edit` commands allows an event's start time to be after its end time. We plan to only allow an event to be added or successfully edited if its start time is before or the same as its end time, with an error message `Start time must be before end time.` being shown otherwise.
 

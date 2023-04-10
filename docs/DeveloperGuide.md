@@ -161,7 +161,7 @@ The Sequence Diagram below illustrates the interactions within the `Logic` compo
     <b>Figure 1.6</b> Sequence diagram of 'Logic' component
 </div>
 <br>
-<div markdown="span" class="alert alert-info">:information_source: **Note:** The lifeline for `DeleteCommandParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+<div markdown="span" class="alert alert-info">:information_source: Note: The lifeline for `DeleteCommandParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
 </div>
 
 <div style="page-break-after: always;"></div>
@@ -173,6 +173,7 @@ Here are the other classes in `Logic` (omitted from the class diagram above) tha
     <b>Figure 1.7</b> Class diagram of 'Logic''
 </div>
 <br>
+
 How the parsing works:
 * When called upon to parse a user command, the `EventBookParser` class creates an `XYZCommandParser` (`XYZ` is a placeholder for the specific command name e.g., `AddCommandParser`) which uses the other classes shown above to parse the user command and create a `XYZCommand` object (e.g., `AddCommand`) which the `EventBookParser` returns back as a `Command` object.
 * All `XYZCommandParser` classes (e.g., `AddCommandParser`, `DeleteCommandParser`, ...) inherit from the `Parser` interface so that they can be treated similarly where possible e.g, during testing.
@@ -360,9 +361,6 @@ The `reminder` feature is implemented with the following considerations:
 * The current time is determined by a `Clock` that is created by `LogicManager`.
 * The `RemindCommandParser` checks if the command argument has the correct format. The command argument represents days and should be a positive integer.
 
-The following object diagram shows objects involved in the execution of a <b>remind</b> command.
-![RemindObjectDiagram](images/RemindObjectDiagram.png)
-
 #### Design considerations:
 
 **Aspect: How current time is determined:**
@@ -374,6 +372,11 @@ The following object diagram shows objects involved in the execution of a <b>rem
 * **Alternative 2:** Determine current time using `LocalDateTime.now()` in `StartTimeWithinDaysPredicate`.
     * Pros: Less coupling between classes.
     * Cons: Difficult to test, as the current time is based on real time.
+
+<img src="images/RemindObjectDiagram.png" width="520" />
+<div style="width:80%;margin:0">
+    <b>Figure 3.4</b> Object diagram of objects involved in the execution of a 'remind' command
+</div>
 
 <div style="page-break-after: always;"></div>
 
@@ -511,8 +514,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1.  User requests to add an event together with its information.
-2.  System adds the event and displays information of the event added.
+1. User requests to add an event together with its information.
+2. System adds the event and displays information of the event added.
 
    Use case ends.
 
@@ -521,7 +524,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * 1a. User enters the wrong command.
    * 1a1. System displays that the command is invalid and to try again.
 
-      Use case resumes at step 1.
+   Use case resumes at step 1.
 
 <div style="page-break-after: always;"></div>
 
@@ -709,41 +712,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 <div style="page-break-after: always;"></div>
 
-**Use case: UC8 - Add Date to Event**
-
-**MSS**
-
-1. User <u>lists events (UC5)</u>.
-2. User requests to add a date to a specified event in the list.
-3. System adds the date to the event and displays information of the event with new date added.
-
-   Use case ends.
-
-**Extensions**
-
- 2a. User enters the wrong command.
-   * 2a1. System displays that the command is invalid and to try again.
-
-      Use case resumes at step 2.
-
-* 2b. User enters an invalid index.
-   * 2b1. System displays that the index is invalid and to try again.
-
-      Use case resumes at step 2.
-
-* 2c. User enters an invalid date.
-   * 2c1. System displays that the date is invalid and to try again.
-
-      Use case resumes at step 2.
-
-* 3a. The event has a date linked already.
-   * 3a1. System replaces the previous date with the new date.
-
-      Use case ends.
-
-<div style="page-break-after: always;"></div>
-
-**Use case: UC9 - Edit Event**
+**Use case: UC8 - Edit Event**
 
 **MSS**
 
@@ -787,7 +756,11 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Glossary
 
+* **Mainstream OS**: Windows, Linux, Unix, macOS
+* **Command Line Interface (CLI)**: A text-based user interface (UI) used to run programs, manage computer files and interact with the computer
+* **User Interface (UI)**: A form of user interface that allows users to interact with electronic devices through graphical icons
 * **Mainstream OS**: Windows, Linux, Unix, OS-X
+* **Event**: A freelancing gig
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -797,8 +770,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 Given below are instructions to test the app manually.
 
-<div markdown="span" class="alert alert-info">:information_source: **Note:** These instructions only provide a starting point for testers to work on;
-testers are expected to do more *exploratory* testing.
+<div markdown="span" class="alert alert-info">:information_source: Note: These instructions only provide a starting point for testers to work on;
+testers are expected to do more exploratory testing.
 
 </div>
 
@@ -808,7 +781,8 @@ testers are expected to do more *exploratory* testing.
 
    1. Download the jar file and copy into an empty folder
 
-   1. Double-click the jar file Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.
+   1. Open the jar file java using command `java -jar Paidlancers.jar`
+       Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.
 
 1. Saving window preferences
 
@@ -817,7 +791,6 @@ testers are expected to do more *exploratory* testing.
    1. Re-launch the app by double-clicking the jar file.<br>
        Expected: The most recent window size and location is retained.
 
-1. _{ more test cases …​ }_
 
 ### Deleting an event
 
@@ -897,12 +870,6 @@ testers are expected to do more *exploratory* testing.
 
    1. Test case: `remind -1` <br>
    Expected: No filtered display shown. Error details shown in the status message.
-
-## Glossary
-* **Command Line Interface (CLI)**: A text-based user interface (UI) used to run programs, manage computer files and interact with the computer
-* **User Interface (UI)**: A form of user interface that allows users to interact with electronic devices through graphical icons
-* **Mainstream OS**: Windows, Linux, Unix, OS-X
-* **Event**: A freelancing gig
 
 ## Appendix: Planned Enhancements
 1. The current `newevent` and `edit` commands allows an event's start time to be after its end time. We plan to only allow an event to be added or successfully edited if its start time is before or the same as its end time, with an error message `Start time must be before end time.` being shown otherwise.
